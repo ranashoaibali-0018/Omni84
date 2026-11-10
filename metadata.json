@@ -1,0 +1,6 @@
+{
+  "name": "OmniAgent - Personal AI Assistant & Python Suite",
+  "description": "Your personal AI agent for research, live web search, content creation, YouTube scriptwriting, and email drafting with human-in-the-loop action confirmation and ready-to-run Python code for Windows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

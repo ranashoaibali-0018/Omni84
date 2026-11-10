@@ -1,0 +1,1 @@
+import sys; print("PYTHON_VERSION:", sys.version.split()[0]); print("SANDBOX_EXECUTION_VERIFIED")

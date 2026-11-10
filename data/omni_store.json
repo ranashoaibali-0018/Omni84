@@ -1,0 +1,53 @@
+{
+  "tasks": [],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Autonomous Lead Generation Bot",
+      "description": "A Python scraper and Gemini-powered B2B lead qualifier that scores target prospect profiles.",
+      "category": "automation",
+      "version": "1.0.0",
+      "status": "active",
+      "files": [
+        {
+          "id": "file-1",
+          "name": "lead_qualifier.py",
+          "path": "lead_qualifier.py",
+          "language": "python",
+          "content": "# Autonomous B2B Lead Qualifier\nimport json\n\ndef qualify_lead(company_name, industry, revenue_est, headcount):\n    \"\"\"Calculates lead fit score between 0 and 100\"\"\"\n    score = 50\n    if industry.lower() in ['saas', 'fintech', 'ai', 'healthtech']:\n        score += 25\n    if headcount > 50:\n        score += 15\n    if revenue_est > 1_000_000:\n        score += 10\n    \n    tier = \"Tier 1 (High Priority)\" if score >= 80 else \"Tier 2 (Standard)\" if score >= 60 else \"Tier 3\"\n    return {\"company\": company_name, \"score\": score, \"tier\": tier}\n\n# Example execution\nprospects = [\n    qualify_lead(\"CloudScale AI\", \"AI\", 5000000, 120),\n    qualify_lead(\"Local Bakery\", \"Retail\", 200000, 8),\n    qualify_lead(\"FinEdge Systems\", \"FinTech\", 12000000, 250)\n]\nprint(json.dumps(prospects, indent=2))\n",
+          "updatedAt": "2026-11-09T15:15:42.311Z"
+        },
+        {
+          "id": "file-2",
+          "name": "README.md",
+          "path": "README.md",
+          "language": "markdown",
+          "content": "# Autonomous Lead Generation Bot\n\nAn automated lead scoring pipeline built with Python and Gemini API.\n\n## Features\n- Evaluates ICP (Ideal Customer Profile) metrics.\n- Computes Tier 1 / Tier 2 qualification scores.\n- Ready to hook into CRM webhooks or Apollo.io.\n",
+          "updatedAt": "2026-11-09T15:15:42.311Z"
+        }
+      ],
+      "createdAt": "2026-11-08T15:15:42.311Z",
+      "updatedAt": "2026-11-09T15:15:42.311Z"
+    },
+    {
+      "id": "proj-2",
+      "name": "AI Video Script & Thumbnail Studio",
+      "description": "Multi-agent video content engine generating hook blueprints, visual cues, and Midjourney thumbnail prompts.",
+      "category": "ai_app",
+      "version": "0.8.2",
+      "status": "in_development",
+      "files": [
+        {
+          "id": "file-3",
+          "name": "video_engine.py",
+          "path": "video_engine.py",
+          "language": "python",
+          "content": "# Video Engine: Retention Hook Optimizer\ndef generate_hook_structure(topic, target_audience):\n    return {\n        \"topic\": topic,\n        \"first_5_seconds\": f\"If you are {target_audience} and still doing this manually, you are wasting 10 hours a week.\",\n        \"visual_cue\": \"[Fast motion graphic of red alarm or declining graph]\",\n        \"audio_sfx\": \"Boom sound effect / Record scratch\",\n        \"retention_bridge\": \"Here is the exact 3-step automation blueprint...\"\n    }\n\nprint(generate_hook_structure(\"AI Agent Automation\", \"freelancers and developers\"))\n",
+          "updatedAt": "2026-11-09T15:15:42.311Z"
+        }
+      ],
+      "createdAt": "2026-11-07T15:15:42.311Z",
+      "updatedAt": "2026-11-09T15:15:42.311Z"
+    }
+  ]
+}
